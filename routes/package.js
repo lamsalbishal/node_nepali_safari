@@ -35,6 +35,17 @@ router.get('/allpackage',function(req,res,next)
 		})
 	});
 
+	router.get('/:id',function(req,res,next){
+		packageModel.find({
+			homeID: req.params.id
+		}, function(err, product) {
+			if (err) {
+				return next(err);
+			}
+			res.json(product);
+		});
+	})
+
 	
 
 router.post('/addpackage',function(req,res,next)

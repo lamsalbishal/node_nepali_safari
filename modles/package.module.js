@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 var Package = new Schema({
     title:String,
     description : String,
-    images:String,
+    image:String,
     homeID:String,
 
 },{timestamps:true})
